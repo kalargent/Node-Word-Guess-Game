@@ -16,9 +16,21 @@ function Word (word) {
         }
         return (answer); 
     }
+    this.guess = function (letter) { 
+        for (var i = 0; i < this.letterArray.length; i++) {
+            this.letterArray[i].check(letter);
+        }
+    }
 }
 
-var word = new Word ("zipper"); 
+var word = new Word ("frankenstein"); 
+// var letter = "n"
 
 console.log(word.display()); 
+word.guess("a"); 
+console.log(word.display()); 
+word.guess("n"); 
+console.log(word.display()); 
+word.guess("f"); 
+console.log(word.display());
 
