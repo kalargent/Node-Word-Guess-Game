@@ -34,3 +34,5 @@ function Word (word) {
 // word.guess("f"); 
 // console.log(word.display());
 
+module.exports = Word; 
+
