@@ -1,8 +1,13 @@
 var Word = require("./word"); 
 var inquirer = require("inquirer"); 
 
-// ARRAY TO CAPTURE THE WORD LIST 
-var wordLib = ["dog", "cat", "bird", "chinchilla"]; 
+// ARRAY TO CAPTURE THE WORD LIST AND LETTERS
+var letters = ["abcdefghijklmnopqrstuvwxyz"];  
+var wordLib = ["dog", "cat", "bird", "chinchilla", "hamster", "ferret"]; 
+var randomWord = wordLib[Math.floor(Math.random() * wordLib.length)]; 
+ 
+console.log (randomWord); 
+// var word = new Word (randomWord); 
 
 startGame(); 
 // console.log("game started"); 
@@ -40,8 +45,7 @@ function startGame () {
 function playgame () { 
     console.log("Play Game"); 
     // GENERATE A WORD 
-    var findWord = wordLib[Math.floor (Math.random() * wordLib.length)]; 
-    var word = new Word (findWord); 
+    var word = new Word (randomWord); 
     console.log(word); 
 
     //DISPLAY THE WORD AS BLANK 
