@@ -45,12 +45,25 @@ function startGame () {
 function playgame () { 
     console.log("Play Game"); 
     // GENERATE A WORD 
-    var word = new Word (randomWord); 
-    console.log(word); 
-
+    var word = new Word (randomWord);  
+    // console.log(word);  
+    console.log(word.display()); 
+    
     //DISPLAY THE WORD AS BLANK 
+    console.log(word.display());
 
     // PROMPT THE USER TO ENTER A LETTER 
+    inquirer
+        .prompt ({
+            name: "letterGuess", 
+            type: "input", 
+            message: "Guess a Letter"
+        })
+
+        .then (function (response){
+            console.log(response); 
+            // word.guess(); 
+        })
 
     // CHECK IF THE LETTER IS IN THE WORD
 
