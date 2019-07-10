@@ -6,7 +6,7 @@ var letters = ["abcdefghijklmnopqrstuvwxyz"];
 var wordLib = ["dog", "cat", "bird", "chinchilla", "hamster", "ferret"]; 
 var randomWord = wordLib[Math.floor(Math.random() * wordLib.length)]; 
  
-console.log (randomWord); 
+// console.log (randomWord); 
 // var word = new Word (randomWord); 
 
 startGame(); 
