@@ -23,14 +23,14 @@ function Word (word) {
     }
 }
 
-var word = new Word ("frankenstein"); 
+// var word = new Word ("frankenstein"); 
 // var letter = "n"
 
-console.log(word.display()); 
-word.guess("a"); 
-console.log(word.display()); 
-word.guess("n"); 
-console.log(word.display()); 
-word.guess("f"); 
-console.log(word.display());
+// console.log(word.display()); 
+// word.guess("a"); 
+// console.log(word.display()); 
+// word.guess("n"); 
+// console.log(word.display()); 
+// word.guess("f"); 
+// console.log(word.display());
 
