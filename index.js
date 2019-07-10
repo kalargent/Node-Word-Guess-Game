@@ -5,6 +5,7 @@ var inquirer = require("inquirer");
 var letters = ["abcdefghijklmnopqrstuvwxyz"];  
 var wordLib = ["dog", "cat", "bird", "chinchilla", "hamster", "ferret"]; 
 var randomWord = wordLib[Math.floor(Math.random() * wordLib.length)]; 
+var word = new Word (randomWord);  
  
 // console.log (randomWord); 
 // var word = new Word (randomWord); 
@@ -44,11 +45,10 @@ function startGame () {
 // FUNCTION THAT RUNS GAME 
 function playgame () { 
     console.log("Play Game"); 
-    // GENERATE A WORD 
-    var word = new Word (randomWord);  
-    // console.log(word);  
+
+    //DISPLAY THE RANDOM WORD AS BLANK AND LOG IT 
+    console.log(randomWord); 
     
-    //DISPLAY THE WORD AS BLANK 
     console.log(word.display());
 
     // PROMPT THE USER TO ENTER A LETTER 
@@ -61,18 +61,15 @@ function playgame () {
 
         // CHECK IF THE LETTER IS IN THE WORD
         .then (function (response){
-            console.log(response); 
+            console.log(response.letterGuess); 
             
             // ACCESS WORD GUESS FUNCTION 
-            word.guess(response); 
+            word.guess(response.letterGuess); 
 
             // REDISPLAY THE WORD WITH THE GUESSED LETTER 
             console.log(word.display());
 
         })
-
-    // REDISPLAY THE WORD 
-
 }
 
 // FUNCTION THAT EXITS IF YOU SAY NO THANKS

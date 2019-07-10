@@ -23,6 +23,8 @@ function Word (word) {
     }
 }
 
+//TEST CODE 
+
 // var word = new Word ("frankenstein"); 
 // var letter = "n"
 
