@@ -47,7 +47,6 @@ function playgame () {
     // GENERATE A WORD 
     var word = new Word (randomWord);  
     // console.log(word);  
-    console.log(word.display()); 
     
     //DISPLAY THE WORD AS BLANK 
     console.log(word.display());
@@ -60,12 +59,17 @@ function playgame () {
             message: "Guess a Letter"
         })
 
+        // CHECK IF THE LETTER IS IN THE WORD
         .then (function (response){
             console.log(response); 
-            // word.guess(); 
-        })
+            
+            // ACCESS WORD GUESS FUNCTION 
+            word.guess(response); 
 
-    // CHECK IF THE LETTER IS IN THE WORD
+            // REDISPLAY THE WORD WITH THE GUESSED LETTER 
+            console.log(word.display());
+
+        })
 
     // REDISPLAY THE WORD 
 
